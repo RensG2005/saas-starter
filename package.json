@@ -1,0 +1,41 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "build:api": "cd packages/api && yarn build",
+    "heroku-prebuild": "rm -rf packages/{web,app}",
+    "heroku-cleanup": "cd packages/api && yarn generate",
+    "build": "yarn build:api",
+    "typecheck": "lerna run typecheck",
+    "lint": "lerna run lint",
+    "ci": "yarn typecheck && yarn lint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "13.1.0",
+    "@commitlint/config-conventional": "13.1.0",
+    "@typescript-eslint/eslint-plugin": "4.29.1",
+    "@typescript-eslint/parser": "4.29.1",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-flowtype": "5.9.0",
+    "eslint-plugin-import": "2.24.0",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "husky": "7.0.1",
+    "lerna": "4.0.0",
+    "lint-staged": "11.1.2",
+    "prettier": "2.3.2",
+    "rimraf": "3.0.2",
+    "typescript": "4.3.5"
+  },
+  "resolutions": {
+    "prettier": "2.3.2"
+  }
+}
