@@ -2,3 +2,5 @@
 schema.graphql
 # redis
 dump.rdb
+
+*/config.ts
