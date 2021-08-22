@@ -7,3 +7,4 @@ dist
 tmp
 temp
 coverage
+*/config.ts
