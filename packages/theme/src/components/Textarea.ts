@@ -13,6 +13,6 @@ export const Textarea = {
   // The default `size` or `variant` values
   defaultProps: {
     variant: "filled",
-    focusBorderColor: "purple.500",
+    focusBorderColor: "blue.500",
   },
 }

@@ -15,6 +15,7 @@ import { prisma } from "./lib/prisma"
 import { loadPrismaHooks } from "./lib/hooks"
 import { loadResolvers } from "./lib/loadResolvers"
 import { currentUser } from "./lib/currentUser"
+// import { redis } from './lib/redis'
 
 class App extends Server {
   constructor() {

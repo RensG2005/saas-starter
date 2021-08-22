@@ -41,7 +41,7 @@ function Login() {
   const form = useForm({ schema: LoginSchema })
 
   const onSubmit = (data: LoginInput) => {
-    return form.handler(() => login({ variables: { data } }), {
+    return form.handler(() => login({ variables: { data: { email: data.email.toLowerCase(), password: data.password } } }), {
       onSuccess: (data) => {
         document.cookie = cookie.serialize(SESSION_TOKEN, data.login.token, {
           path: "/",
@@ -52,6 +52,7 @@ function Login() {
       },
     })
   }
+
   return (
     <Center minH={{ base: "auto", md: "100vh" }} p={4} pt={{ base: 40, md: 4 }}>
       <Head>
@@ -63,7 +64,7 @@ function Login() {
             <Heading as="h1">Login</Heading>
             <Input name="email" label="Email" placeholder="jim@gmail.com" />
             <Input name="password" label="Password" type="password" placeholder="********" />
-            <Button colorScheme="purple" type="submit" isFullWidth isLoading={loading} isDisabled={loading}>
+            <Button colorScheme="blue" type="submit" isFullWidth isLoading={loading} isDisabled={loading}>
               Login
             </Button>
             <FormError />

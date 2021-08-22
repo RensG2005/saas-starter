@@ -100,7 +100,7 @@ function Users() {
           </Button>
           <Button
             display={{ base: "none", md: "flex" }}
-            colorScheme="purple"
+            colorScheme="blue"
             leftIcon={<Box boxSize="18px" as={CgUserAdd} />}
           >
             Create user
@@ -129,7 +129,7 @@ function Users() {
               maxW="30px"
               header={
                 <Checkbox
-                  colorScheme="purple"
+                  colorScheme="blue"
                   isChecked={data && data.users.count > 0 && selectedUsers.length > 0}
                   onChange={toggleAll}
                   iconColor="white"
@@ -138,7 +138,7 @@ function Users() {
               }
               row={(user) => (
                 <Checkbox
-                  colorScheme="purple"
+                  colorScheme="blue"
                   isChecked={selectedUsers.includes(user.id)}
                   iconColor="white"
                   onChange={() => toggleSelected(user.id)}

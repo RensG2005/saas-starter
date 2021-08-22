@@ -14,7 +14,7 @@ if (IS_PRODUCTION) {
   Sentry.init({
     dsn: SENTRY_DSN,
     integrations: [new Integrations.BrowserTracing()],
-    enabled: IS_PRODUCTION,
+    // enabled: IS_PRODUCTION,
     tracesSampleRate: 1.0,
   })
 }

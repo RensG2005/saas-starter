@@ -41,7 +41,7 @@ export function Login() {
         Login
       </Text>
       <Input
-        _focus={{ borderColor: "purple.500" }}
+        _focus={{ borderColor: "blue.500" }}
         type="email"
         autoCapitalize="none"
         placeholder="Email"
@@ -49,14 +49,14 @@ export function Login() {
         onChangeText={setEmail}
       />
       <Input
-        _focus={{ borderColor: "purple.500" }}
+        _focus={{ borderColor: "blue.500" }}
         placeholder="Password"
         type="password"
         autoCapitalize="none"
         value={password}
         onChangeText={setPassword}
       />
-      <Button onPress={handleLogin} colorScheme="purple">
+      <Button onPress={handleLogin} colorScheme="blue">
         Submit
       </Button>
     </Stack>

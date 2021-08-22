@@ -17,12 +17,12 @@ export function Home() {
       {loading ? null : me ? (
         <Stack p={4} space={4} w="100%">
           <Text fontSize="lg">Hey {me.firstName}!</Text>
-          <Button colorScheme="purple" onPress={logout}>
+          <Button colorScheme="blue" onPress={logout}>
             Logout
           </Button>
         </Stack>
       ) : (
-        <Button colorScheme="purple" onPress={() => navigate("Login")}>
+          <Button colorScheme="blue" onPress={() => navigate("Login")}>
           Login
         </Button>
       )}

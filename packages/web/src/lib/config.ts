@@ -21,7 +21,7 @@ export const IS_PRODUCTION = env === "production"
 export const IS_DEV = !IS_PRODUCTION
 export const REDIRECT_PATH = "redirect"
 
-export const SENTRY_DSN = "https://5d0371a223bb4509902f8940cb957daf@o204549.ingest.sentry.io/5741383"
+export const SENTRY_DSN = "https://0f43770bca5b4cd29f420e2b0ee4e091@o952244.ingest.sentry.io/5901614"
 
 export const API_URL = IS_PRODUCTION ? "https://boilerplate.graphcdn.app" : "http://localhost:5000/graphql"
 // export const API_URL = IS_PRODUCTION

@@ -93,7 +93,7 @@ function SidebarLink({ href, icon, ...props }: SidebarLinkProps) {
         alignItems="center"
         justifyContent={{ base: "center", md: "flex-start" }}
         fontWeight="semibold"
-        color={isActive ? "purple.500" : undefined}
+        color={isActive ? "blue.500" : undefined}
         {...props}
       >
         <Center w="26px">{icon}</Center>

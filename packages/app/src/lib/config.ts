@@ -4,7 +4,7 @@ const { NODE_ENV } = process.env
 export const IS_PRODUCTION = NODE_ENV === "production"
 export const IS_DEV = NODE_ENV === "development"
 
-export const SENTRY_DSN = "https://5d0371a223bb4509902f8940cb957daf@o204549.ingest.sentry.io/5741383"
+export const SENTRY_DSN = "https://0f43770bca5b4cd29f420e2b0ee4e091@o952244.ingest.sentry.io/5901614"
 export const API_URL = IS_PRODUCTION
   ? "https://nq-boilerplate.herokuapp.com/graphql"
   : "http://localhost:5000/graphql"

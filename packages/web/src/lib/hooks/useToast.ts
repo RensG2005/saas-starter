@@ -4,8 +4,9 @@ export function useToast() {
   const toast = useChakraToast()
   const handleToast = (props: UseToastOptions) => {
     toast({
-      position: "bottom-right",
+      position: "top",
       isClosable: true,
+      duration: 3000,
       ...props,
     })
   }

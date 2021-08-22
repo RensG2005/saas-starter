@@ -54,7 +54,7 @@ export default function ResetPassword() {
               <Text>Enter a new password below.</Text>
             </Box>
             <Input name="password" placeholder="*********" type="password" />
-            <Button isFullWidth colorScheme="purple" type="submit" isDisabled={loading} isLoading={loading}>
+            <Button isFullWidth colorScheme="blue" type="submit" isDisabled={loading} isLoading={loading}>
               Reset
             </Button>
             <Link href="/login">Login</Link>
