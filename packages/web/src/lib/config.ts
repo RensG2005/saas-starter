@@ -24,11 +24,8 @@ export const REDIRECT_PATH = "redirect"
 //TODO
 // export const SENTRY_DSN = env(SENTRY_DSN)
 
-export const API_URL = IS_PRODUCTION ? "https://boilerplate.graphcdn.app" : "http://localhost:5000/graphql"
-// export const API_URL = IS_PRODUCTION
-//   ? "https://nq-boilerplate.herokuapp.com/graphql"
-//   : "http://localhost:5000/graphql"
+export const API_URL = IS_PRODUCTION ? "https://memorylia.herokuapp.com/graphql" : "http://localhost:5000/graphql"
 
-export const WEB_URL = IS_PRODUCTION ? "boilerplate.noquarter.co" : "localhost:3000"
+export const WEB_URL = IS_PRODUCTION ? "https://saas-starter-navy.vercel.app/" : "localhost:3000"
 
 export const SESSION_TOKEN = "boilerplate.session.token"
