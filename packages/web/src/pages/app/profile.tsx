@@ -30,7 +30,7 @@ export const DESTROY_ACCOUNT = gql`
   }
 `
 
-function profile() {
+function Profile() {
     const { loading, me } = useMe()
     const logout = useLogout()
     const alertProps = useDisclosure()
@@ -113,4 +113,4 @@ function profile() {
     )
 }
 
-export default profile
+export default Profile

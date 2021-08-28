@@ -1,12 +1,12 @@
 import { DashboardLayout } from "components/DashboardLayout"
 import React from 'react'
 
-function events() {
+function Events() {
     return (
         <DashboardLayout>
-            events
+            Events
         </DashboardLayout>
     )
 }
 
-export default events
+export default Events

@@ -1,7 +1,7 @@
 import { DashboardLayout } from "components/DashboardLayout"
 import React from 'react'
 
-function people() {
+function People() {
     return (
         <DashboardLayout>
             people
@@ -9,4 +9,4 @@ function people() {
     )
 }
 
-export default people
+export default People

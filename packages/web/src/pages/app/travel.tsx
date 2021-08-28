@@ -1,7 +1,7 @@
 import { DashboardLayout } from "components/DashboardLayout"
 import React from 'react'
 
-function travel() {
+function Travel() {
     return (
         <DashboardLayout>
             travel memories
@@ -9,4 +9,4 @@ function travel() {
     )
 }
 
-export default travel
+export default Travel

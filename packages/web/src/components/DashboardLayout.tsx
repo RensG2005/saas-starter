@@ -28,7 +28,6 @@ import {
   FiHome,
   FiTrendingUp,
   FiCompass,
-  FiStar,
   FiSettings,
   FiMenu,
   FiBell,
