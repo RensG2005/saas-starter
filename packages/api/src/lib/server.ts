@@ -5,12 +5,14 @@ import chalk from "chalk"
 import morgan from "morgan"
 import { Integrations } from "@sentry/tracing"
 import * as Sentry from "@sentry/node"
+import env from "dotenv"
+env.config()
 
-import { IS_PRODUCTION, PORT, SENTRY_DSN } from "./config"
+import { IS_PRODUCTION, PORT } from "./config"
 
 if (IS_PRODUCTION) {
   Sentry.init({
-    dsn: SENTRY_DSN,
+    dsn: process.env.SENTRY_DSN,
     integrations: [new Integrations.Express()],
     enabled: IS_PRODUCTION,
     tracesSampleRate: 1.0,

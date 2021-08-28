@@ -44,7 +44,7 @@ export default function ForgotPassword() {
   return (
     <Center minH={{ base: "auto", md: "100vh" }} p={4} pt={{ base: 40, md: 4 }}>
       <Head>
-        <title>Fullstack boilerplate - Forgot password</title>
+        <title>Memorylia - Forgot password</title>
       </Head>
       <Box w={["100%", 400]}>
         <Form {...form} onSubmit={handleSubmit}>

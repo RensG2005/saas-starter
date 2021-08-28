@@ -28,7 +28,7 @@ interface MailArgs {
 }
 
 export class Mailer {
-  private readonly from: string = "Fullstack boilerplate <info@noquarter.co>"
+  private readonly from: string = "Memorylia <info@noquarter.co>"
   private devMail: Transporter
 
   constructor() {

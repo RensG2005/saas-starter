@@ -12,11 +12,11 @@ export default class BoilerplateDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="theme-color" key="theme-color" content="#000000" />
-          <meta name="description" content="Welcome to the Fullstack boilerplate!" key="description" />
-          <meta property="og:title" content="Fullstack boilerplate" key="title" />
+          <meta name="description" content="Welcome to Memorylia!" key="description" />
+          <meta property="og:title" content="Memorylia" key="title" />
           <meta
             property="og:description"
-            content="Welcome to the Fullstack boilerplate!"
+            content="Welcome to Memorylia!"
             key="og:description"
           />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

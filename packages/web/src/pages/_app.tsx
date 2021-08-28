@@ -8,18 +8,19 @@ import { Integrations } from "@sentry/tracing"
 import { theme } from "@boilerplate/theme"
 
 import { useApollo } from "lib/apollo/client"
-import { IS_PRODUCTION, SENTRY_DSN } from "lib/config"
+//TODO
+// import { IS_PRODUCTION, SENTRY_DSN } from "lib/config"
 
-if (IS_PRODUCTION) {
-  Sentry.init({
-    dsn: SENTRY_DSN,
-    integrations: [new Integrations.BrowserTracing()],
-    // enabled: IS_PRODUCTION,
-    tracesSampleRate: 1.0,
-  })
-}
+// if (IS_PRODUCTION) {
+//   Sentry.init({
+//     dsn: SENTRY_DSN,
+//     integrations: [new Integrations.BrowserTracing()],
+//     // enabled: IS_PRODUCTION,
+//     tracesSampleRate: 1.0,
+//   })
+// }
 
-export default function BoilerplateApp(props: AppProps<any>) {
+export default function Memorylia(props: AppProps<any>) {
   const { Component, pageProps } = props
   const apolloClient = useApollo(pageProps.initialApolloState)
 

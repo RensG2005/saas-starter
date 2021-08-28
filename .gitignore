@@ -8,3 +8,4 @@ tmp
 temp
 coverage
 */config.ts
+*/.env

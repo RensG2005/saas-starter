@@ -1,7 +1,7 @@
 import * as React from "react"
 import cookie from "cookie"
 import { gql, useApolloClient } from "@apollo/client"
-import { Box, Stack, Heading, Button, Center, Flex } from "@chakra-ui/react"
+import { Box, Stack, Heading, Button, Center, Flex, IconButton } from "@chakra-ui/react"
 import Link from "next/link"
 import Head from "next/head"
 import { useRouter } from "next/router"
@@ -14,6 +14,8 @@ import { REDIRECT_PATH, SESSION_TOKEN } from "lib/config"
 import { FormError } from "components/FormError"
 import { useForm } from "lib/hooks/useForm"
 import { withNoAuth } from "components/hoc/withNoAuth"
+import { IoIosArrowRoundBack } from "react-icons/io";
+import Router from 'next/router'
 
 export const LOGIN = gql`
   mutation Login($data: LoginInput!) {
@@ -48,15 +50,16 @@ function Login() {
           maxAge: 30 * 24 * 60 * 60, // 30 days
         })
         client.writeQuery<MeQuery>({ query: MeDocument, data: { me: data.login.user } })
-        router.replace(redirect || "/")
+        router.push(redirect || "/app/dashboard")
       },
     })
   }
-
+  
   return (
+    <>
     <Center minH={{ base: "auto", md: "100vh" }} p={4} pt={{ base: 40, md: 4 }}>
       <Head>
-        <title>Fullstack boilerplate - Login</title>
+        <title>Memorylia - Login</title>
       </Head>
       <Box w={["100%", 400]}>
         <Form onSubmit={onSubmit} {...form}>
@@ -76,6 +79,18 @@ function Login() {
         </Form>
       </Box>
     </Center>
+    <Box pos="fixed" top="5" left="5">
+      <IconButton 
+          onClick={() => Router.replace("/")} 
+          bg="transparent" 
+          icon={<IoIosArrowRoundBack />} 
+          size="lg"
+          fontSize="40px"
+          aria-label="back button"
+          variant="ghost"
+          />
+    </Box>
+    </>
   )
 }
 

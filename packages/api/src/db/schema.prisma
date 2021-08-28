@@ -17,6 +17,12 @@ enum Role {
   ADMIN
 }
 
+// enum MemoryType {
+//   TRAVEL
+//   PEOPLE
+//   EVENTS
+// }
+
 model User {
   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   email     String   @unique
@@ -29,3 +35,11 @@ model User {
   createdAt DateTime @default(now()) @db.Timestamptz
   updatedAt DateTime @default(now()) @db.Timestamptz
 }
+
+// model Memory {
+//   id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+//   creator
+//   role      MemoryType     
+//   createdAt DateTime @default(now()) @db.Timestamptz
+//   updatedAt DateTime @default(now()) @db.Timestamptz
+// }
