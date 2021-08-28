@@ -7,7 +7,7 @@ if (APP_ENV) {
 } else {
   const hostname = typeof window !== "undefined" && window?.location?.hostname
   if (hostname) {
-    if (hostname.includes("boilerplate")) {
+    if (hostname.includes("saas-starter")) {
       env = "production"
     } else {
       env = "development"
