@@ -1,5 +1,5 @@
 import { IconButton, useColorMode, Box } from '@chakra-ui/react'
-
+import { BiMoon, BiSun } from "react-icons/bi"
 
 export default function Settings() {
 
