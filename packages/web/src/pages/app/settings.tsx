@@ -1,4 +1,4 @@
-import { IconButton, useColorMode } from '@chakra-ui/react'
+import { IconButton, useColorMode, Box } from '@chakra-ui/react'
 
 
 export default function Settings() {
