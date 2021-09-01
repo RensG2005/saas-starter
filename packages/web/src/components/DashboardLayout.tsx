@@ -186,7 +186,7 @@ const MobileNav = ({ onOpen, me, logout,  ...rest }: MobileProps) => {
         fontSize="2xl"
         fontFamily="monospace"
         fontWeight="bold">
-        Logo2222
+        Memorylia
       </Text>
 
       <HStack spacing={{ base: '0', md: '6' }}>
