@@ -228,7 +228,7 @@ const MobileNav = ({ onOpen, me, logout,  ...rest }: MobileProps) => {
               bg={useColorModeValue('white', 'gray.900')}
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
               <MenuItem onClick={() => Router.replace("/app/profile")}>Profile</MenuItem>
-              <MenuItem>Settings</MenuItem>
+              <MenuItem onClick={() => Router.replace("/app/settings")}>Settings</MenuItem>
               <MenuItem>Billing</MenuItem>
               <MenuDivider />
               <MenuItem onClick={() => logout()}>Sign out</MenuItem>
