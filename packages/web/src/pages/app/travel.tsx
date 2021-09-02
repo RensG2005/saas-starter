@@ -1,4 +1,4 @@
-import { DashboardLayout } from "components/DashboardLayout"
+import { DashboardLayout } from "components/dashboardLayout"
 import React from 'react'
 
 function Travel() {

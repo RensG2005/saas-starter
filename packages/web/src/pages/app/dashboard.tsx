@@ -10,7 +10,7 @@ import {
 
 import { useMe } from "lib/hooks/useMe"
 import { withAuth } from "components/hoc/withAuth"
-import { DashboardLayout } from "components/DashboardLayout"
+import { DashboardLayout } from "components/dashboardLayout/"
 
 function Dashboard() {
   const {loading, me} = useMe()

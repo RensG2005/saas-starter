@@ -15,7 +15,10 @@
     "build": "yarn build:api",
     "typecheck": "lerna run typecheck",
     "lint": "lerna run lint",
-    "ci": "yarn typecheck && yarn lint"
+    "ci": "yarn typecheck && yarn lint",
+    "dev": "concurrently \"npm run dev-web\" \"npm run dev-api\"",
+    "dev-web": "cd packages/web && npm run dev",
+    "dev-api": "cd packages/api && npm run watch"
   },
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
@@ -23,6 +26,7 @@
     "@typescript-eslint/eslint-plugin": "4.29.1",
     "@typescript-eslint/parser": "4.29.1",
     "babel-eslint": "10.1.0",
+    "concurrently": "^6.2.1",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-flowtype": "5.9.0",

@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client"
-import { DashboardLayout } from "components/DashboardLayout"
+import { DashboardLayout } from "components/dashboardLayout"
 import { useMe } from "lib/hooks/useMe"
 import React from 'react'
 import Head from 'next/head'

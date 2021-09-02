@@ -1,6 +1,6 @@
 import { IconButton, useColorMode, Box } from '@chakra-ui/react'
 import { BiMoon, BiSun } from "react-icons/bi"
-import { DashboardLayout } from "components/DashboardLayout"
+import { DashboardLayout } from "components/dashboardLayout"
 
 export default function Settings() {
 
