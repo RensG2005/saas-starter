@@ -108,7 +108,7 @@ export default function Home() {
           <Heading size="2xl" as="h2">All-in-one platform</Heading>
           <Text w="80%" mx="auto" fontSize="xl" my={6}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, nemo explicabo quas totam dolorem laboriosam soluta exercitationem tenetur? Ad, illo ratione blanditiis fugit dolorum porro iure dolorem debitis facere incidunt?</Text>
           <Grid templateColumns={{ sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)", xl: "repeat(4, 1fr)" }} textAlign="start">
-              {Array(8).fill(null).map(idc => <FadeInWhenVisible><FeatureCard /></FadeInWhenVisible>)}
+              {Array(8).fill(null).map((idc, i) => <FadeInWhenVisible key={i}><FeatureCard /></FadeInWhenVisible>)}
           </Grid>
         </Flex>
       </Center>

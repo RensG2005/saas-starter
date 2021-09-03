@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import React, { Suspense } from 'react'
+import React from 'react'
 
 import { withAuth } from "components/hoc/withAuth"
 import { DashboardLayout } from "components/dashboardLayout/"
