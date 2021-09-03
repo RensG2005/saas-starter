@@ -32,11 +32,11 @@ export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode()
   const isDark = colorMode === "dark"
 
-  const {loading, me} = useMe()
-  if(loading) return <Center h={300}><Spinner /></Center>
-  if(me) Router.push("/app/dashboard")
+  const { loading, me } = useMe()
+  if (loading) return <Center h={300}><Spinner /></Center>
+  if (me) Router.push("/app/dashboard")
 
- 
+
 
   return (
     <>
@@ -57,20 +57,22 @@ export default function Home() {
           onClick={toggleColorMode}
           icon={<Box as={isDark ? BiSun : BiMoon} boxSize="20px" />}
         />
-          <Box >
-            <NextLink passHref href="/login">
-              <Button as={Link} variant="ghost" href="/login" sx={{ textDecor: "none !important" }}>
-                Login
-              </Button>
-            </NextLink>
-            <NextLink passHref href="/register">
-              <Button colorScheme="blue" as={Link} sx={{ textDecor: "none !important" }} ml="2">
-                Register
-              </Button>
-            </NextLink>
-          </Box>
+        <Box >
+          <NextLink passHref href="/login">
+            <Button as={Link} variant="ghost" href="/login" sx={{ textDecor: "none !important" }}>
+              Login
+            </Button>
+          </NextLink>
+          <NextLink passHref href="/register">
+            <Button colorScheme="blue" as={Link} sx={{ textDecor: "none !important" }} ml="2">
+              Register
+            </Button>
+          </NextLink>
+        </Box>
       </Flex>
       {/* header/navbar ends */}
+
+
       <FadeInWhenVisible>
         <Center my={[40, 52]} flexDirection="column" w={["90%", "70%", "60%"]} mx="auto">
           <Heading as="h1" fontSize="6xl" textAlign="center">
@@ -102,15 +104,13 @@ export default function Home() {
 
       {/* features section */}
       <Center my={96} w="80%" mx="auto">
-        <FadeInWhenVisible>
-          <Flex flexDirection="column" justifyContent="center" textAlign="center">
-            <Heading size="2xl" as="h2">All-in-one platform</Heading>
-            <Text w="80%" mx="auto" fontSize="xl" my={6}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, nemo explicabo quas totam dolorem laboriosam soluta exercitationem tenetur? Ad, illo ratione blanditiis fugit dolorum porro iure dolorem debitis facere incidunt?</Text>
-            <Grid templateColumns={{ sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)", xl: "repeat(4, 1fr)" }} textAlign="start">
-                {Array(8).fill(null).map(x => <FeatureCard />)}
-            </Grid>
-          </Flex>
-        </FadeInWhenVisible>
+        <Flex flexDirection="column" justifyContent="center" textAlign="center">
+          <Heading size="2xl" as="h2">All-in-one platform</Heading>
+          <Text w="80%" mx="auto" fontSize="xl" my={6}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, nemo explicabo quas totam dolorem laboriosam soluta exercitationem tenetur? Ad, illo ratione blanditiis fugit dolorum porro iure dolorem debitis facere incidunt?</Text>
+          <Grid templateColumns={{ sm: "repeat(2, 1fr)", lg: "repeat(3, 1fr)", xl: "repeat(4, 1fr)" }} textAlign="start">
+              {Array(8).fill(null).map(idc => <FadeInWhenVisible><FeatureCard /></FadeInWhenVisible>)}
+          </Grid>
+        </Flex>
       </Center>
 
 

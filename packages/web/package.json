@@ -39,6 +39,9 @@
     "dayjs": "1.10.6",
     "dotenv": "^10.0.0",
     "framer-motion": "4.1.17",
+    "leaflet": "^1.7.1",
+    "leaflet-defaulticon-compatibility": "^0.1.1",
+    "leaflet-geosearch": "^3.5.0",
     "next": "11.0.1",
     "next-transpile-modules": "8.0.0",
     "react": "17.0.2",
@@ -46,6 +49,7 @@
     "react-hook-form": "7.12.2",
     "react-icons": "4.2.0",
     "react-intersection-observer": "^8.32.0",
+    "react-leaflet": "^3.2.1",
     "yup": "0.32.9"
   },
   "devDependencies": {
@@ -55,6 +59,7 @@
     "@graphql-codegen/typescript-operations": "2.0.1",
     "@graphql-codegen/typescript-react-apollo": "3.0.0",
     "@types/cookie": "0.4.1",
+    "@types/leaflet": "^1.7.5",
     "@types/react": "17.0.16",
     "@types/react-dom": "17.0.9",
     "eslint-config-next": "11.0.1"

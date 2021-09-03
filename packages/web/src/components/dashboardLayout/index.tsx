@@ -225,6 +225,7 @@ const MobileNav = ({ onOpen, me, logout,  ...rest }: MobileProps) => {
               </HStack>
             </MenuButton>
             <MenuList
+              zIndex={100}
               bg={useColorModeValue('white', 'gray.900')}
               borderColor={useColorModeValue('gray.200', 'gray.700')}>
               <MenuItem onClick={() => Router.replace("/app/profile")}>Profile</MenuItem>

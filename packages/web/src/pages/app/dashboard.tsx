@@ -1,36 +1,31 @@
 
 import Head from 'next/head'
-import React from 'react'
-import {
-  Spinner,
-  Center,
-  Heading,
-  Flex
-} from '@chakra-ui/react'
+import React, { Suspense } from 'react'
 
-import { useMe } from "lib/hooks/useMe"
 import { withAuth } from "components/hoc/withAuth"
 import { DashboardLayout } from "components/dashboardLayout/"
+import dynamic from "next/dynamic";
+import { Spinner } from "@chakra-ui/spinner";
+import { Center } from "@chakra-ui/layout";
 
-function Dashboard() {
-  const {loading, me} = useMe()
+function Dashboard(): JSX.Element {
+  const MapWithNoSSR = dynamic(() => import("components/map"), {
+    loading: () => <Center><Spinner /></Center>,
+    ssr: false
+  });
+
   return (
     <>
-    <Head>
-      <title>Memorylia Dashboard</title>
-    </Head>
+      <Head>
+        <title>Memorylia Dashboard</title>
+      </Head>
       <DashboardLayout>
-      {loading && <Center><Spinner /></Center>}
-        <Center minH={{ base: "auto", md: "80vh" }}>
-          <Flex flexDir="column">
-            <Heading>
-              Hello {me?.firstName + " " + me?.lastName}
-            </Heading>
-          </Flex>
-        </Center>
-        </DashboardLayout>
+            <MapWithNoSSR />
+      </DashboardLayout>
     </>
   )
 }
+
+
 
 export default withAuth(Dashboard)
